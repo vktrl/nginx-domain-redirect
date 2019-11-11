@@ -2,14 +2,14 @@
 
 ![Docker Build Status](https://img.shields.io/docker/build/vktrl/nginx-domain-redirect) ![Docker Pulls](https://img.shields.io/docker/pulls/vktrl/nginx-domain-redirect)
 
-All this lightweight Docker image does is redirecting all requests to [www.]olddomain.com to https://www.newdomain.com
+All this lightweight Docker image does is redirect all requests from `[www.]olddomain.com` to `https://www.newdomain.com`
 
 ## What? ##
 - It's tiny, built on Alpine
 - Configurable port (defaults to 80)
-- Logging to stdout 
-- Permanent 301 redirect
-- Paths are preserved http://www.old.com/blog/article will be redirected to https://www.new.com/blog/article
+- Logging to stdout, ready for Stackdriver/Cloudwatch
+- Permanent 301 redirect using `return` vs `rewrite` for faster execution
+- Paths are preserved: `htp://www.old.com/blog/article` will be redirected to `https://www.new.com/blog/article`
 
 ## How? ##
 ### docker-compose ###

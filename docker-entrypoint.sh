@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z "$NEW_DOMAIN" ] || [ -z "$OLD_DOMAIN" ]; then
-	printf "You need to set them variables m8"
+	printf "You need to set them variables m8\n"
 	exit 1
 fi
 if [ -z "$PORT" ]; then
@@ -13,6 +13,6 @@ fi
 sed -i -e "s/{{OLD_DOMAIN}}/${OLD_DOMAIN}/g" /etc/nginx/nginx.conf
 sed -i -e "s/{{NEW_DOMAIN}}/${NEW_DOMAIN}/g" /etc/nginx/nginx.conf
 
-printf "Redirecting from http(s)://(www.)${OLD_DOMAIN}/* to https://${NEW_DOMAIN}/\$1\n"
+printf "Redirecting from http(s)://(www.)${OLD_DOMAIN}/* to https://www.${NEW_DOMAIN}/\$1\n"
 
 exec "$@"
