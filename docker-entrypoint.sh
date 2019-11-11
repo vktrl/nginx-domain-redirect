@@ -4,8 +4,8 @@ if [ -z "$NEW_DOMAIN" ] || [ -z "$OLD_DOMAIN" ]; then
 	exit 1
 fi
 if [ -z "$PORT" ]; then
-    printf "Using default port 8080\n"
-    sed -i -e "s/{{PORT}}/8080/g" /etc/nginx/nginx.conf
+    printf "Using default port 80\n"
+    sed -i -e "s/{{PORT}}/80/g" /etc/nginx/nginx.conf
 else
     sed -i -e "s/{{PORT}}/${PORT}/g" /etc/nginx/nginx.conf
 fi
