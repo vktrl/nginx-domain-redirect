@@ -9,7 +9,7 @@ All this lightweight Docker image does is redirect all requests from `[www.]oldd
 - Configurable port (defaults to 80)
 - Logging to stdout, ready for Stackdriver/Cloudwatch
 - Permanent 301 redirect using `return` vs `rewrite` for faster execution
-- Paths are preserved: `htp://www.old.com/blog/article` will be redirected to `https://www.new.com/blog/article`
+- Paths are preserved: `http://www.old.com/blog/article` will be redirected to `https://www.new.com/blog/article`
 
 ## How? ##
 ### docker-compose ###
