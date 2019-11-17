@@ -30,9 +30,11 @@ services:
 ### Docker ###
 
 **Using settings file:**
+
 `docker run --rm -d --env-file settings.env -p 80:80 vktrl/nginx-domain-redirect`
 
 **Using inline variables:**
+
 `docker run --rm -d -e OLD_DOMAIN=foo.com -e NEW_DOMAIN=bar.com -p 80:80 vktrl/nginx-domain-redirect`
 
 ## Notes ##
