@@ -1,6 +1,6 @@
 # NGINX Domain Redirect #
 
-![Docker Build Status](https://img.shields.io/docker/build/vktrl/nginx-domain-redirect) ![Docker Pulls](https://img.shields.io/docker/pulls/vktrl/nginx-domain-redirect)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/vktrl/nginx-domain-redirect) ![Docker Pulls](https://img.shields.io/docker/pulls/vktrl/nginx-domain-redirect)
 
 All this lightweight Docker image does is redirect all requests from `[www.]olddomain.com` to `https://www.newdomain.com`
 
